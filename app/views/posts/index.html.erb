@@ -1,9 +1,14 @@
-<!-- the reason why you use post in the loop and not posts is because you're referencing
-each post separately, no need to use @ -->
+<!-- # the reason why you use post in the loop and not posts is because you're referencing-->
+<!-- #each post separately, no need to use @ -->
+
 <% @posts.each do |post| %>
-	<h2> <%= post.title %> </h2>
-	<div> <%= truncate(post.body, :length => 35) %></div>
-	<br>
-	<%= link_to "Read Post", post %>
+	<div class="post-format">
+		<div class="post-content">
+			<h2> <%= post.title %> </h2>
+			<div> <%= truncate(post.body, :length => 50) %></div>
+			<br><br><br>
+			<%= link_to "Read Note", post %>
+		</div>
+	</div>
 <% end %>
 

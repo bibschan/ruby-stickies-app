@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
     <title>Blog</title>
     <%= csrf_meta_tags %>
 
@@ -9,9 +10,10 @@
   </head>
 
   <body>
+  <div id="menu"> 
   	<%= link_to "Home", root_path %>
-  	<%= link_to "Create new post", new_post_path %>
-
+  	<%= link_to "Create new note", new_post_path %>
+  </div>
     <%= yield %>
   </body>
 </html>
